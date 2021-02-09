@@ -1,4 +1,4 @@
-# GATSBY MDX BLOG
+# ALLY MDX BLOG
 
 ## Project Setup
 
