@@ -4,37 +4,40 @@ Variables
 ===============
 */
 
+
+@import url("https://use.typekit.net/jrs5cnv.css");
+
 :root {
   /* dark shades of primary color*/
 
-  --clr-primary-1: hsl(245, 91%, 17%);
+  --clr-primary-1:  hsl(245, 91%, 17%);
   --clr-primary-2: hsl(245, 84%, 25%);
   --clr-primary-3: hsl(245, 81%, 29%);
   --clr-primary-4: hsl(245, 77%, 34%);
-  --clr-primary-5: hsl(245, 62%, 45%);
+  --clr-primary-5: hsl(350deg 100% 82%); /* hsl(245, 62%, 45%);*/
   /* lighter shades of primary color */
   --clr-primary-6: hsl(245, 57%, 50%);
   --clr-primary-7: hsl(245, 65%, 59%);
   --clr-primary-8: hsl(245, 80%, 74%);
   --clr-primary-9: hsl(245, 94%, 87%);
-  --clr-primary-10: hsl(245, 87%, 94%);
+  --clr-primary-10: hsl(351deg 41% 93%); /*hsl(245, 87%, 94%);*/
   /* darkest grey - used for headings */
-  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-1: hsl(0deg 0% 0%);  /*hsl(209, 61%, 16%);*/
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(206, 33%, 96%);
+  --clr-grey-10: hsl(351deg 41% 93%); /* hsl(206, 33%, 96%);*/
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-green-light: hsl(134, 41%, 88%);
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
-  --clr-white: #fff;
-  --clr-black: #0a0c10;
-  --ff-primary: 'Roboto', sans-serif;
-  --ff-secondary: 'Open Sans', sans-serif;
+  --clr-white: #ffff;
+  --clr-black: #000000;
+  --ff-primary: baskerville-urw, serif;
+  --ff-secondary: bree, sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 0.25rem;
@@ -57,7 +60,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
+  font-family: var(--ff-primary);
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -79,7 +82,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-secondary);
 }
 h1 {
   font-size: 3rem;
@@ -256,13 +259,13 @@ Navbar
     letter-spacing: var(--spacing);
     font-size: 1rem;
     transition: var(--transition);
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius);
   }
   .page-link:hover {
-    background: var(--clr-primary-5);
+    background: var(--clr-black);
     color: var(--clr-primary-10);
   }
   .nav-icons {
