@@ -375,7 +375,7 @@ Hero
 ===============
 */
 .hero {
-  background: var(--pink);
+  background: var(--white);
   height: 12rem;
   position: relative;
   z-index: -1;
@@ -392,14 +392,14 @@ Hero
   background: url('../assets/vector.svg');
   background-size: cover;
 }
-.hero-person {
+.hero-girl {
   display: none;
 }
 @media screen and (min-width: 800px) {
   .hero {
     height: 20rem;
   }
-  .hero-person {
+  .hero-girl {
     width: 20rem;
     height: 24rem;
     display: block;
@@ -427,10 +427,8 @@ Posts Component
   margin-bottom: 4rem;
 }
 .posts-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #e12d39;
-  font-size: 1.25rem;
+  color: var(--black);
+  font-size: 1.4rem;
   margin-bottom: 2.5rem;
 }
 
