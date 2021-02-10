@@ -14,7 +14,7 @@ const SocialLinks = ({ styleClass }) => {
       </li>
       <li>
         <a href="https://instagram.com/allydigitalsolutions">
-          <FaInstagramSquare className="social-icon dribble-icon"></FaInstagramSquare>
+          <FaInstagramSquare className="social-icon insta-icon"/>
         </a>
       </li>
       <li>
