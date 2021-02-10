@@ -6,7 +6,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Post = ({frontmatter, excerpt}) => {
-  console.log(frontmatter, excerpt)
   const {title, author, image, slug, date, category, readTime} = frontmatter
   return (
     <Wrapper>
