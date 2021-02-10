@@ -42,11 +42,12 @@ const Wrapper = styled.article`
     margin-bottom: 1rem;
     background: var(--clr-grey-10);
     padding: 0.25rem 0.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-size: 0.9rem;
+    font-weight: 400;
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
-    color: var(--clr-grey-5);
+    color: var(--black);
+    text-transform: capitalize;
   }
   h3 {
     font-weight: 400;
@@ -78,8 +79,8 @@ const Wrapper = styled.article`
     }
   }
   .link:hover {
-    border-color: var(--clr-primary-8);
-    color: var(--clr-primary-8);
+    border-color: crimson;
+    color: crimson;
   }
   footer {
     margin-top: 2rem;

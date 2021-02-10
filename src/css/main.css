@@ -38,6 +38,7 @@ Variables
 
   --ff-primary: baskerville-urw, serif;
   --ff-secondary: bree, sans-serif;
+  --cursive:  shelby, sans-serif;
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
   --radius: 5px; /*0.25rem;*/
@@ -62,6 +63,7 @@ Variables
   --pastelPink2: #ecd9e0;
   --pastelPink3: #e5cfd6;
   --tealGreen: hsl(180deg 33% 72%);
+  --red:crimson; 
 
 }
 /*
@@ -423,12 +425,16 @@ Posts Component
 .posts {
   width: 85vw;
   max-width: var(--max-width);
+  font-family: var(--ff-primary);
   margin: 0 auto;
   margin-bottom: 4rem;
 }
 .posts-title {
-  color: var(--black);
-  font-size: 1.4rem;
+  /*color: mediumvioletred;*/
+  color: var(--favoritePink);
+  font-family: var(--cursive);
+  font-size: 4rem;
+  font-weight: 400;
   margin-bottom: 2.5rem;
 }
 
