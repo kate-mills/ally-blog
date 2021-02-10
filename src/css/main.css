@@ -246,14 +246,13 @@ Navbar
 }
 
 .facebook-icon {
-  color: #3b5998;
+  color: var(--black);
 }
 .twitter-icon {
-  color: #00acee;
-  color: var(--tealGreen);
+  color: var(--black);
 }
 .insta-icon {
-  color: #ea4c89;
+  color: var(--black);
 }
 @media screen and (min-width: 800px) {
   .toggle-btn {
@@ -656,6 +655,10 @@ Footer
 }
 .footer-icons li {
   transition: var(--transition);
+}
+
+.footer-icons svg{
+  color: var(--pastelPink2);
 }
 .footer-icons li:hover {
   transform: translateY(-10%);
