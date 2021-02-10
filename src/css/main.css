@@ -116,8 +116,8 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--grey);
-  background: var(--black);
+  color: var(--black);
+  /*background: var(--black);*/
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -139,7 +139,7 @@ p {
   h2,
   h3,
   h4 {
-    line-height: 1;
+    line-height: 1.2;
   }
 }
 /*  global classes */
@@ -149,7 +149,7 @@ p {
   text-transform: uppercase;
   color: var(--black);
   background: var(--pastelPink1);
-  padding: 0.75rem 5rem; /*0.375rem 0.75rem;*/
+  padding: 0.8rem 6rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 400;
@@ -174,16 +174,24 @@ p {
   background: var(--clr-red-light);
 }
 .center-btn {
-  display: block;
-  width: 12rem;
   text-align: center;
   margin: 3rem auto;
+  color: var(--pink);
+  background: var(--black);
+}
+.center-btn:hover{
+  color: var(--black);
+  background: var(--pink);
 }
 /* section */
 .page-center {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
+}
+.center {
+  margin: 0 auto;
+  text-align: center;
 }
 @media screen and (min-width: 992px) {
   .page-center {
@@ -357,7 +365,7 @@ Sidebar
   top: 1rem;
   right: 1rem;
   background: transparent;
-  border: transparent;
+  border: 2px solid transparent;
   font-size: 3rem;
   cursor: pointer;
 }
@@ -507,7 +515,7 @@ Single Pages
 .newsletter-page h4 {
   text-transform: initial;
   margin-bottom: 1.25rem;
-  color: var(--grey); 
+  color: var(--black); 
 }
 .contact-form {
   display: flex;
@@ -531,11 +539,23 @@ Single Pages
   text-transform: capitalize;
   border-color: var(--pastelPink1);
   border-right: 1px solid var(--pastelPink1);
+  background: var(--pastelPink1);
+}
+.submit-btn:active {
+  outline-color: var(--black);
+}
+input:focus,
+.submit-btn:focus{
+  outline-color: var(--primaryColor);
 }
 .submit-btn:hover {
   border-color: var(--black);
   border-right: 1px solid var(--black);
+  cursor: pointer;
+  background: var(--black);
+  color: var(--white);
 }
+
 @media screen and (min-width: 992px) {
   .contact-form {
     flex-direction: row;
@@ -565,7 +585,7 @@ Testing Post and Components
 
 .code {
   background: #1e1e1e;
-  color: var(--black);
+  color: var(--pink);
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
   margin: 2rem 0;
@@ -594,7 +614,7 @@ Testing Post and Components
   color: var(--black);
 }
 .nice-text p {
-  margin-bottom: 0;
+  margin-bottom: 0; padding-bottom: .6rem;
 }
 @media screen and (min-width: 992px) {
   .nice-text {
@@ -664,6 +684,7 @@ Footer
   transform: translateY(-10%);
 }
 .footer p {
+  background: var(--black);
   margin-bottom: 0;
   color: var(--grey);
   font-size: 0.8rem;
@@ -671,4 +692,26 @@ Footer
   letter-spacing: var(--spacing);
   padding: 2rem 0;
   width: 100vw;
+}
+
+
+/* MDX */
+.mdx-a{
+  margin: 0 5px;
+  font-weight: 700;
+}
+.font{
+  font-size: 2rem;
+}
+.serif{
+  font-family: var(--ff-primary);
+}
+.script{
+  font-family: shelby, sans-serif;
+}
+.san{
+  font-family: aileron, sans-serif;
+}
+.display{
+  font-family: lust-display-didone, serif;
 }
