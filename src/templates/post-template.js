@@ -4,7 +4,7 @@ import Hero from '../components/Hero'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
 import Banner from '../components/Banner'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 
@@ -22,13 +22,14 @@ const PostTemplate = ({data}) => {
       <Wrapper>
         {/* post info*/}
         <article>
-          <Image fluid={image.childImageSharp.fluid} />
           <div className="post-info">
-            <span>{category}</span>
+            <span className="category">{category}</span>
             <h2>{title}</h2>
             <p>{date}</p>
             <div className="underline"></div>
           </div>
+          <Image fluid={image.childImageSharp.fluid} />
+          <div className="center"><Link to="/posts" className="btn center-btn">back to all posts</Link></div>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
         <article>
@@ -48,11 +49,11 @@ const Wrapper = styled.section`
     margin: 2rem 0 4rem 0;
     text-align: center;
     span {
-      background: var(--clr-primary-5);
-      color: var(--clr-white);
+      background: var(--primaryPink);
+      color: var(--black);
       border-radius: var(--radius);
       padding: 0.25rem 0.5rem;
-      text-transform: uppercase;
+      text-transform: capitalize;
       letter-spacing: var(--spacing);
     }
     h2 {
@@ -60,12 +61,12 @@ const Wrapper = styled.section`
       font-weight: 400;
     }
     p {
-      color: var(--clr-grey-5);
+      color: var(--darkGrey);
     }
     .underline {
       width: 5rem;
       height: 1px;
-      background: var(--clr-grey-9);
+      background: var(--black);
       margin: 0 auto;
       margin-bottom: 1rem;
     }
@@ -88,7 +89,6 @@ export const query = graphql`
   query GetSinglePost($slug: String) {
     mdx(frontmatter: {slug: {eq: $slug}}) {
       id
-      excerpt
       body
       frontmatter {
         title

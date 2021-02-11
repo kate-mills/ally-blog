@@ -53,7 +53,6 @@ Variables
   --altBlack: rgb(15 14 23);
   --black: hsl(0deg 0% 0%);
   --white: #ffff;
-  --darkGreen: darkolivegreen;
   --darkGrey: darkslategrey;
   --grey: slategrey;
   --pink:hsl(351deg 41% 93%);
@@ -69,6 +68,8 @@ Variables
   --pastelPink3: #e5cfd6;
   --tealGreen: hsl(180deg 33% 72%);
   --red:crimson; 
+  --oldGrey: #b8b7bc;
+  --darkGreen: var(--oldGrey);
 
 }
 /*
@@ -95,6 +96,7 @@ body {
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -183,8 +185,8 @@ p {
 .center-btn {
   text-align: center;
   margin: 3rem auto;
-  color: var(--pink);
-  background: var(--black);
+  color: var(--black);
+  background: var(--oldGrey);
 }
 .center-btn:hover{
   color: var(--black);
@@ -383,10 +385,10 @@ Hero
 */
 .hero {
   background: var(--white);
-  height: 12rem;
+  height: 20rem;
   position: relative;
   z-index: -1;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
 .hero::after {
@@ -404,11 +406,11 @@ Hero
 }
 @media screen and (min-width: 800px) {
   .hero {
-    height: 20rem;
+    height: 22rem;
   }
   .hero-girl {
-    width: 20rem;
-    height: 24rem;
+    width: 10rem;
+    height: 15rem;
     display: block;
     position: absolute;
     bottom: 0;

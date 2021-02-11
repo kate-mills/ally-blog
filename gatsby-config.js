@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    `gatsby-plugin-mdx`,
+    //`gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,
@@ -25,12 +25,6 @@ module.exports = {
        options: {
          gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
        },
-     },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `gatsbyjs`,
-      },
     },
     {
       resolve: `gatsby-plugin-webfonts`,
