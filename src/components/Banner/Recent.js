@@ -69,12 +69,15 @@ const Wrapper = styled.div`
   p {
     font-size: 0.6rem;
     margin-bottom: 0;
-    color: var(--darkGrey);
+    color: var(--black);
   }
   .post:hover {
     h5 {
-      color: var(--darkGreen);
+      background: lavender;
+      width: fit-content;
     }
   }
 `
 export default Recent
+
+// linen mistyrose, lightyellow

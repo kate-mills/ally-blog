@@ -56,6 +56,7 @@ Variables
   --darkGrey: darkslategrey;
   --grey: slategrey;
   --pink:hsl(351deg 41% 93%);
+  --hintOfPink: #fdeef314;
   --favoritePink: hsl(350deg 100% 82%);
   --hoverColor: hsl(0deg 100% 99% / 94%);
   --hoverBackground: #909198;
@@ -262,14 +263,10 @@ Navbar
   display: none;
 }
 
-.facebook-icon {
-  color: var(--black);
-}
-.twitter-icon {
-  color: var(--black);
-}
-.insta-icon {
-  color: var(--black);
+.facebook-icon,
+.twitter-icon,
+.insta-icon{
+  color: var(--pastelPink1);
 }
 @media screen and (min-width: 800px) {
   .toggle-btn {
@@ -384,7 +381,7 @@ Hero
 ===============
 */
 .hero {
-  background: var(--white);
+  background: var(--oldGrey);
   height: 20rem;
   position: relative;
   z-index: -1;
@@ -465,6 +462,9 @@ Banner Component
   display: flex;
   justify-content: center;
 }
+.banner-icons svg{
+  color: var(--oldGrey);
+}
 .banner-icons a {
   font-size: 1.5rem;
   margin: 0 0.25rem;
@@ -475,6 +475,10 @@ Banner Component
 .banner-icons li:hover {
   transform: translateY(-10%);
 }
+.banner-icons li:hover svg{
+  color: var(--black);
+}
+
 /*
 ===============
 Single Pages
@@ -688,7 +692,7 @@ Footer
 }
 
 .footer-icons svg{
-  color: var(--pastelPink2);
+  color: var(--primaryPink);
 }
 .footer-icons li:hover {
   transform: translateY(-10%);
@@ -696,11 +700,13 @@ Footer
 .footer p {
   background: var(--black);
   margin-bottom: 0;
-  color: var(--grey);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
-  padding: 2rem 0;
+  color: var(--white);
+  font-family: var(--ff-secondary);
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  padding: 2rem 0 3rem;
   width: 100vw;
 }
 

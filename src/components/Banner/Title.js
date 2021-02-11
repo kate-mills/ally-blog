@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   h4 {
     font-family: var(--ff-primary);
     color: var(--black);
+    font-size: 1.2rem;
     text-transform: capitalize;
     background: var(--white);
     display: inline-block;

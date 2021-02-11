@@ -21,7 +21,7 @@ const PostTemplate = ({data}) => {
       <Hero/>
       <Wrapper>
         {/* post info*/}
-        <article>
+        <article className="post-container">
           <div className="post-info">
             <span className="category">{category}</span>
             <h2>{title}</h2>
@@ -45,6 +45,9 @@ const Wrapper = styled.section`
   max-width: 1100px;
   margin: 0 auto;
   margin-bottom: 4rem;
+  .post-container{
+    margin-bottom: 5rem;
+  }
   .post-info {
     margin: 2rem 0 4rem 0;
     text-align: center;
@@ -74,6 +77,9 @@ const Wrapper = styled.section`
   @media (min-width: 992px) {
     & {
       width: 92vw;
+    }
+    .post-container{
+      margin-bottom: 0;
     }
   }
   @media (min-width: 1170px) {

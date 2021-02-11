@@ -14,6 +14,8 @@ const Banner = ({hideImg}) => {
 }
 
 const Wrapper = styled.aside`
+  background: var(--hintOfPink);
+  color: var(--black);
   display: grid;
   grid-template-columns: 200px;
   justify-content: center;

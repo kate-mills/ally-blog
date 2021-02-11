@@ -38,7 +38,7 @@ const About = ({hideImg}) => {
 const Wrapper = styled.div`
   text-align: center;
   p {
-    color: var(--clr-grey-5);
+    color: var(--black);
     font-size: 0.7rem;
   }
   .img {

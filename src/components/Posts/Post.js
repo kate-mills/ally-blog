@@ -38,15 +38,15 @@ const Wrapper = styled.article`
     height: 17rem;
   }
   .category {
+    color: var(--black);
     display: inline-block;
     margin-bottom: 1rem;
-    background: var(--primaryPink);
+    background: mistyrose;
     padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
     font-weight: 400;
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
-    color: var(--darkGrey);
     text-transform: capitalize;
   }
   h3 {
@@ -69,7 +69,7 @@ const Wrapper = styled.article`
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     font-weight: 700;
-    color: var(--black);
+    color: var(--darkGrey);
     padding-bottom: 0.1rem;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ const Wrapper = styled.article`
   }
   .link:hover {
     border-color: var(--grey);
-    color: var(--darkGreen);
+    color: var(--grey);
   }
   footer {
     margin-top: 2rem;
