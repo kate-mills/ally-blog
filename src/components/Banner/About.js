@@ -19,13 +19,18 @@ const query = graphql`
 `
 
 
-const About = () => {
+const About = ({hideImg}) => {
   const data = useStaticQuery(query)
 
   return (
     <Wrapper>
       <Title title="Ally Blog"/>
-      <Image fixed={data.file.childImageSharp.fixed} className="img"/>
+      {hideImg ?
+          "":
+        <Image fixed={data.file.childImageSharp.fixed} className="img"/>
+      }
+      <p>Follow us on social media @allydigitalsolutions</p>
+      <SocialLinks styleClass="banner-icons"></SocialLinks>
     </Wrapper>
   )
 }
@@ -34,6 +39,7 @@ const Wrapper = styled.div`
   text-align: center;
   p {
     color: var(--clr-grey-5);
+    font-size: 0.7rem;
   }
   .img {
     border-radius: 50%;

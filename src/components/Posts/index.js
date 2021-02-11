@@ -1,7 +1,8 @@
 import React from 'react'
 import Post from './Post'
 import Banner from '../Banner'
-const Posts = ({posts, title}) => {
+const Posts = ({posts, title, hideImg}) => {
+  console.log('hideImg', hideImg)
   return (
     <section className="posts">
       <h3 className="posts-title">{title}</h3>
@@ -15,7 +16,7 @@ const Posts = ({posts, title}) => {
         </article>
         {/* banner column */}
         <article>
-          <Banner/>
+          <Banner hideImg={hideImg}/>
         </article>
       </div>
     </section>

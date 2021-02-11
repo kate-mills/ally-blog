@@ -9,10 +9,12 @@ import SEO from '../components/SEO'
 const IndexPage = ({data}) => {
   const {allMdx: {posts}} = data;
 
-  return <Layout>
-    <Hero showGirl/>
-    <Posts posts={posts} title="recently published" />
+  return (
+    <Layout>
+      <Hero showGirl/>
+      <Posts posts={posts} title="recently published" hideImg />
     </Layout>
+  )
 }
 
 

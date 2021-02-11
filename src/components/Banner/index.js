@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import About from './About'
 import Recent from './Recent'
 import BannerCategories from './BannerCategories'
-const Banner = () => {
+const Banner = ({hideImg}) => {
   return (
     <Wrapper>
-      <About/>
-      <Recent/>
+      <About hideImg={hideImg}/>
       <BannerCategories/>
+      <Recent/>
     </Wrapper>
   )
 }
