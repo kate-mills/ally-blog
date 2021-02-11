@@ -2,8 +2,29 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Link } from 'gatsby'
 
+const query = graphql`
+  {
+    allMdx {
+      distinct(field: frontmatter___category)
+    }
+  }
+`
 const Categories = () => {
-  return <h3>categories component</h3>
+  const {allMdx:{distinct}} = useStaticQuery(query)
+
+  return (
+    <ul className="categories">
+      {distinct.map((category, id)=>{
+        return(
+          <li key={id}>
+            <Link to={`/${category}/`} className="category">
+              {category}
+            </Link>
+          </li>
+        )
+      })}
+    </ul>
+  )
 }
 
 export default Categories

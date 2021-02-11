@@ -25,9 +25,12 @@ Variables
   --clr-primary-9: hsl(245, 94%, 87%);
 
   /* darkest grey - used for headings */
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-1: darkslategrey;
+  --clr-grey-2: darkslategrey;
+  --clr-grey-3: darkslategrey;
+  --clr-grey-4: darkslategrey;
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: darkslategrey;
   --clr-grey-8: hsl(233deg 4% 58%);  /* --grey */ /*hsl(210, 31%, 80%);*/
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(351deg 41% 93%); /* hsl(206, 33%, 96%);*/
@@ -50,7 +53,9 @@ Variables
   --altBlack: rgb(15 14 23);
   --black: hsl(0deg 0% 0%);
   --white: #ffff;
-  --grey:  hsl(233deg 4% 58%);
+  --darkGreen: darkolivegreen;
+  --darkGrey: darkslategrey;
+  --grey: slategrey;
   --pink:hsl(351deg 41% 93%);
   --favoritePink: hsl(350deg 100% 82%);
   --hoverColor: hsl(0deg 100% 99% / 94%);
@@ -294,7 +299,7 @@ Navbar
   }
   .page-link:hover {
     background: var(--pastelPink1);
-    color: var(--grey);
+    color: dimgrey; /*darkslategrey*/
   }
   .nav-icons {
     display: flex;
@@ -430,10 +435,9 @@ Posts Component
   margin-bottom: 4rem;
 }
 .posts-title {
-  /*color: mediumvioletred;*/
   color: var(--black);
-  font-family: var(--cursive);
-  font-size: 4rem;
+  font-family: var(--ff-secondary);
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 2.5rem;
 }

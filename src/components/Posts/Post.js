@@ -40,13 +40,13 @@ const Wrapper = styled.article`
   .category {
     display: inline-block;
     margin-bottom: 1rem;
-    background: var(--clr-grey-10);
+    background: var(--primaryPink);
     padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
     font-weight: 400;
     border-radius: var(--radius);
     letter-spacing: var(--spacing);
-    color: var(--black);
+    color: var(--darkGrey);
     text-transform: capitalize;
   }
   h3 {
@@ -57,19 +57,19 @@ const Wrapper = styled.article`
   .underline {
     width: 5rem;
     height: 1px;
-    background: var(--clr-grey-9);
+    background: var(--black);
     margin: 0 auto;
     margin-bottom: 1rem;
   }
   p {
-    color: var(--clr-grey-5);
+    color: var(--darkGrey);
     line-height: 1.8;
   }
   .link {
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     font-weight: 700;
-    color: var(--clr-primary-5);
+    color: var(--black);
     padding-bottom: 0.1rem;
     display: flex;
     align-items: center;
@@ -79,23 +79,23 @@ const Wrapper = styled.article`
     }
   }
   .link:hover {
-    border-color: crimson;
-    color: crimson;
+    border-color: var(--grey);
+    color: var(--darkGreen);
   }
   footer {
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--clr-grey-9);
+    border-top: 1px solid var(--black);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--clr-grey-5);
+    color: var(--black);
 
     & .date {
       display: flex;
       align-items: center;
       & .icon {
-        color: var(--clr-primary-5);
+        color: var(--black);
         margin-right: 0.5rem;
       }
     }
