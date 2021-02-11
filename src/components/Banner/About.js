@@ -4,10 +4,30 @@ import Image from 'gatsby-image'
 import { graphql, useStaticQuery } from 'gatsby'
 import Title from './Title'
 import styled from 'styled-components'
-//...GatsbyImageSharpFixed
+
+
+const query = graphql`
+  {
+    file(relativePath: {eq: "square-coffee-gal.png"}) {
+      childImageSharp {
+        fixed(width: 150, height: 150) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
+
 
 const About = () => {
-  return <Wrapper>Banner About</Wrapper>
+  const data = useStaticQuery(query)
+
+  return (
+    <Wrapper>
+      <Title title="Ally"/>
+      <Image fixed={data.file.childImageSharp.fixed} className="img"/>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.div`
@@ -19,4 +39,5 @@ const Wrapper = styled.div`
     border-radius: 50%;
   }
 `
+
 export default About
