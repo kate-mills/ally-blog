@@ -8,7 +8,7 @@ import styled from 'styled-components'
 
 const query = graphql`
   {
-    file(relativePath: {eq: "square-coffee-gal.png"}) {
+    file(relativePath: {eq: "blogger.png"}) {
       childImageSharp {
         fixed(width: 150, height: 150) {
           ...GatsbyImageSharpFixed
@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <Wrapper>
-      <Title title="Ally"/>
+      <Title title="Ally Blog"/>
       <Image fixed={data.file.childImageSharp.fixed} className="img"/>
     </Wrapper>
   )

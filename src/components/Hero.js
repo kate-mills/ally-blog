@@ -5,7 +5,7 @@ import Image from 'gatsby-image'
 
 const query = graphql`
   {
-    girl: file(relativePath: {eq: "coder-cropped.png"}) {
+    girl: file(relativePath: {eq: "blogging.png"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

@@ -431,7 +431,7 @@ Posts Component
 }
 .posts-title {
   /*color: mediumvioletred;*/
-  color: var(--favoritePink);
+  color: var(--black);
   font-family: var(--cursive);
   font-size: 4rem;
   font-weight: 400;

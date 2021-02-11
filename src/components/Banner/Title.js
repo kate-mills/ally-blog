@@ -13,7 +13,8 @@ const Wrapper = styled.div`
   text-align: center;
   margin-bottom: 1.25rem;
   h4 {
-    color: var(--grey);
+    font-family: var(--ff-primary);
+    color: var(--black);
     text-transform: capitalize;
     background: var(--white);
     display: inline-block;
