@@ -64,6 +64,7 @@ const Wrapper = styled.article`
   p {
     color: var(--darkGrey);
     line-height: 1.8;
+    font-size: 0.8rem;
   }
   .link {
     text-transform: uppercase;
@@ -94,6 +95,7 @@ const Wrapper = styled.article`
     & .date {
       display: flex;
       align-items: center;
+      font-size: 0.8rem;
       & .icon {
         color: var(--black);
         margin-right: 0.5rem;

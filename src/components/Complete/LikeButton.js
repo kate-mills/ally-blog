@@ -34,16 +34,15 @@ const Wrapper = styled.div`
     border: transparent;
     margin-right: 1rem;
     cursor: pointer;
-    color: var(--clr-primary-5);
+    color: var(--altPink);
   }
   p {
     margin-bottom: 0;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   span {
     font-size: 2rem;
-    color: var(--clr-primary-5);
+    color: var(--altPink);
     font-weight: 700;
   }
 `

@@ -26,7 +26,7 @@ const About = ({hideImg}) => {
     <Wrapper>
       <Title title="Ally Blog"/>
       {hideImg ?
-          "":
+        <Image fixed={data.file.childImageSharp.fixed} className="img-toggle"/>:
         <Image fixed={data.file.childImageSharp.fixed} className="img"/>
       }
       <p>Follow us on social media @allydigitalsolutions</p>
@@ -44,6 +44,14 @@ const Wrapper = styled.div`
   .img {
     border-radius: 50%;
   }
+  .img-toggle {
+    border-radius: 50%;
+  }
+  @media (min-width:1170px){
+  .img-toggle {
+    display: none !important;
+  }
+ }
 `
 
 export default About

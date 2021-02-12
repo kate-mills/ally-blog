@@ -731,3 +731,28 @@ Footer
 .display{
   font-family: lust-display-didone, serif;
 }
+
+.underline{
+  min-width: 20%;
+  width: 20%;
+  height: 3px;
+  background: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background: var(--tealGreen);
+}
+.mdx-article{
+  margin: 2rem auto;
+  border-left: 3px solid white;
+  padding-left: 1rem;
+  padding-top: 0;
+}
+
+.mdx-article  a{
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--darkGrey);
+}
+.mdx-article a:hover {
+  color: var(--black);
+}

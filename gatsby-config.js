@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    //`gatsby-plugin-mdx`,
+    //`gatsby-plugin-mgatsby-remark-imagesdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,

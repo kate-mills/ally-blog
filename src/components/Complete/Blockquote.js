@@ -46,7 +46,7 @@ const Wrapper = styled.blockquote`
     background: var(--clr-grey-10);
     border-radius: var(--radius);
     color: var(--clr-grey-1);
-    border-left: 3px solid var(--clr-grey-5);
+    border-left: 3px solid var(--oldGrey);
     position: relative;
     margin: 2rem 0;
   }
@@ -60,12 +60,12 @@ const Wrapper = styled.blockquote`
     position: absolute;
     top: 0;
     left: -3px;
-    background: var(--clr-white);
+    background: var(--white);
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 6px solid var(--clr-white);
+    border: 6px solid var(--white);
   }
   .info {
     background: var(--clr-primary-10);

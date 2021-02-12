@@ -18,7 +18,10 @@ const PostTemplate = ({data}) => {
   return (
 
     <Layout>
-      <Hero/>
+      <Hero showGirl/>
+      <div className="center"
+        style={{marginBottom: '1rem'}}
+      > <Link to="/posts" className="btn center-btn">back to all posts</Link> </div>
       <Wrapper>
         {/* post info*/}
         <article className="post-container">
@@ -28,12 +31,11 @@ const PostTemplate = ({data}) => {
             <p>{date}</p>
             <div className="underline"></div>
           </div>
-          <Image fluid={image.childImageSharp.fluid} />
-          <div className="center"><Link to="/posts" className="btn center-btn">back to all posts</Link></div>
+          <Image fluid={image.childImageSharp.fluid} className="main-img"/>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
         <article>
-          <Banner/>
+          <Banner hideImg/>
         </article>
       </Wrapper>
     </Layout>
@@ -65,6 +67,7 @@ const Wrapper = styled.section`
     }
     p {
       color: var(--darkGrey);
+      font-size: 0.8rem;
     }
     .underline {
       width: 5rem;
@@ -81,12 +84,20 @@ const Wrapper = styled.section`
     .post-container{
       margin-bottom: 0;
     }
+    .main-img{
+      max-width: 75%;
+      margin: 0 auto;
+    }
   }
   @media (min-width: 1170px) {
     & {
       display: grid;
       grid-template-columns: 1fr 200px;
       column-gap: 4rem;
+    }
+    .main-img{
+      max-width: 75%;
+      margin: 0 auto;
     }
   }
 `
