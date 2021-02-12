@@ -57,6 +57,7 @@ Variables
   --grey: slategrey;
   --pink:hsl(351deg 41% 93%);
   --hintOfPink: #fdeef314;
+  --purple: #1f1499;
   --favoritePink: hsl(350deg 100% 82%);
   --hoverColor: hsl(0deg 100% 99% / 94%);
   --hoverBackground: #909198;
@@ -99,7 +100,11 @@ ul {
 }
 
 a {
+  color: var(--purple);
   text-decoration: none;
+}
+a:hover{
+  color: var(--black);
 }
 
 h1,
@@ -192,6 +197,7 @@ p {
 .center-btn:hover{
   color: var(--black);
   background: var(--pink);
+  border-color: var(--pink);
 }
 /* section */
 .page-center {
@@ -712,14 +718,6 @@ Footer
 
 
 /* MDX */
-.mdx-a{
-  margin: 0 5px;
-  font-weight: 700;
-}
-.mdx-a-inline{
-  display:inline !important;
-  margin: 0 0.5rem;
-}
 .font{
   font-size: 2rem;
 }
@@ -755,10 +753,17 @@ Footer
 .mdx-article  a{
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--darkGrey);
 }
 .mdx-article a:hover {
   color: var(--black);
+}
+.mdx-a{
+  margin: 0 5px;
+  color: var(--purple);
+}
+.mdx-a-inline{
+  display:inline !important;
+  margin: 0 0.5rem;
 }
 
 ul  {

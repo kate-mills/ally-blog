@@ -19,9 +19,6 @@ const PostTemplate = ({data}) => {
 
     <Layout>
       <Hero showGirl/>
-      <div className="center"
-        style={{marginBottom: '1rem'}}
-      > <Link to="/posts" className="btn center-btn">back to all posts</Link> </div>
       <Wrapper>
         {/* post info*/}
         <article className="post-container">
@@ -37,6 +34,7 @@ const PostTemplate = ({data}) => {
         <article>
           <Banner hideImg/>
         </article>
+      <div className="center" style={{marginBottom: '1rem'}} > <Link to="/posts" className="btn center-btn">back to all posts</Link> </div>
       </Wrapper>
     </Layout>
   )
