@@ -716,6 +716,10 @@ Footer
   margin: 0 5px;
   font-weight: 700;
 }
+.mdx-a-inline{
+  display:inline !important;
+  margin: 0 0.5rem;
+}
 .font{
   font-size: 2rem;
 }
@@ -755,4 +759,38 @@ Footer
 }
 .mdx-article a:hover {
   color: var(--black);
+}
+
+ul  {
+  list-style: none;
+}
+ul[data-bullet-list] {
+  color: var(--mainBlack);
+  display: block;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 27px;
+  list-style:none;
+  margin: 0 20px;
+}
+ul[data-bullet-list] > li p{
+  margin: 7.5px auto;
+  padding: 0 0 .2rem;
+  white-space: pre-line;
+  font-weight: 400;
+}
+ul[data-bullet-list] > li:first-child  p{ 
+  padding: .4rem 0 .2rem;
+}
+ul[data-bullet-list] li>*:first-child::before{
+  box-sizing: border-box;
+  color: var(--mainBlack);
+  content: "\2022";
+  display: inline-block;
+  margin-left: -40px;
+  min-width: 40px;
+  padding-right: 10px;
+  text-align: right;
+  white-space: pre;
 }
