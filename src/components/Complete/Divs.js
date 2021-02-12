@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 
 export const Div = (props, className)=>{
   const {children} = props
@@ -9,7 +8,3 @@ export const Div = (props, className)=>{
     {children}
     </div>
 }
-
-
-const styledDiv = styled.div``
-

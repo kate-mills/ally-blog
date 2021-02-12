@@ -6,6 +6,7 @@ import Image from 'gatsby-image'
 import Banner from '../components/Banner'
 import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import SEO from '../components/SEO'
 
 
 const PostTemplate = ({data}) => {
@@ -16,8 +17,8 @@ const PostTemplate = ({data}) => {
   } = data
 
   return (
-
     <Layout>
+      <SEO title={title}/>
       <Hero showGirl/>
       <Wrapper>
         {/* post info*/}

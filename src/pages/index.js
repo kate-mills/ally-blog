@@ -11,7 +11,7 @@ const IndexPage = ({data}) => {
 
   return (
     <Layout>
-      <SEO title="AllyBlog"/>
+      <SEO title="Ally Digital Blog"/>
       <Hero showGirl/>
       <Posts posts={posts} title="recently published" hideImg />
     </Layout>

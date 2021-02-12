@@ -1,4 +1,12 @@
 module.exports = {
+    siteMetadata: {
+      title: `Ally Blog`,
+      titleTemplate: `%s | Ally Blog`,
+      description: `A blog about web development.`,
+      url: `https://allydigitalblog.netlify.app`,
+      image: `blogging.png`, // must be in static/
+      twitterUsername: `@katie_napa`,
+    },
   plugins: [
     //`gatsby-plugin-mgatsby-remark-imagesdx`,
     `gatsby-plugin-react-helmet`,
