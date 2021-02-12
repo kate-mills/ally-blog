@@ -23,13 +23,13 @@ const PostTemplate = ({data}) => {
       <Wrapper>
         {/* post info*/}
         <article className="post-container">
+          <Image fluid={image.childImageSharp.fluid} className="main-img"/>
           <div className="post-info">
             <span className="category">{category}</span>
-            <h2>{title}</h2>
-            <p>{date}</p>
+            <h1>{title}</h1>
+            <h4>{date}</h4>
             <div className="underline"></div>
           </div>
-          <Image fluid={image.childImageSharp.fluid} className="main-img"/>
           <MDXRenderer>{body}</MDXRenderer>
         </article>
         <article>

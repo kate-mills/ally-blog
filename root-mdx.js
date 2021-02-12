@@ -3,11 +3,10 @@
 
 import React from 'react'
 import {MDXProvider} from '@mdx-js/react'
-import { Blockquote, Div } from './src/components/Complete'
+import { Blockquote } from './src/components/Complete'
 
 const components = {
   blockquote: Blockquote,
-  div:Div, 
 }
 
 export const wrapMDX = ({ element }) => {
