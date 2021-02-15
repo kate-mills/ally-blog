@@ -38,10 +38,10 @@ const Wrapper = styled.article`
     height: 17rem;
   }
   .category {
-    color: var(--black);
+    color:  var(--vividText);
     display: inline-block;
     margin-bottom: 1rem;
-    background: mistyrose;
+    background: var(--instaLadderlight);
     padding: 0.25rem 0.5rem;
     font-size: 0.9rem;
     font-weight: 400;
@@ -70,7 +70,7 @@ const Wrapper = styled.article`
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     font-weight: 700;
-    color: var(--darkGrey);
+    color: var(--mauve);
     padding-bottom: 0.1rem;
     display: flex;
     align-items: center;
@@ -80,8 +80,8 @@ const Wrapper = styled.article`
     }
   }
   .link:hover {
-    border-color: var(--grey);
-    color: var(--grey);
+    border-color: var(--brightPink);
+    color: var(--pantsDarkPink);
   }
   footer {
     margin-top: 2rem;

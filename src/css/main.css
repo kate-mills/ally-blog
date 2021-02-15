@@ -53,7 +53,7 @@ Variables
   --brightPink: #E31E69;
   --mauve: #8F7F8C;
   --cameraLightPink: #FDEBEA;
-  --cameraMauve: #D09505;
+  --cameraMauve: #D09595;
   --cameraPink: #FFD3D1;
   --cameraText1: #6B615F;
   --cameraText2: #3D3531;
@@ -97,7 +97,7 @@ ul {
 }
 
 a {
-  color: var(--mauve);
+  color: var(--favoritePink);
   text-decoration: none;
 }
 a:hover{
@@ -190,11 +190,11 @@ p {
   margin: 3rem auto;
   color: var(--cameraText1);
   background: var(--favoritePink);
-  border-color: var(--cameraPink);
+  border-color: var(--cameraMauve);
 }
 .center-btn:hover{
   color: var(--cameraText2);
-  background: var(--favoritePink);
+  background: var(--cameraMauve);
   border-color: var(--cameraPink);
 }
 /* section */
@@ -269,7 +269,7 @@ Navbar
 
 .facebook-icon,
 .insta-icon{
-  color: var(--mauve);
+  color: var(--cameraMauve);
 }
 @media screen and (min-width: 800px) {
   .toggle-btn {
@@ -421,7 +421,7 @@ Hero
 }
 .small-hero {
   height: 12rem;
-  background: var(--pink);
+  background: var(--favoritePink);
   margin-bottom: 6rem;
 }
 /*
@@ -466,7 +466,7 @@ Banner Component
   justify-content: center;
 }
 .banner-icons svg{
-  color: var(--oldGrey);
+  color: var(--cameraMauve);
 }
 .banner-icons a {
   font-size: 1.5rem;
@@ -503,14 +503,14 @@ Single Pages
 }
 /* success page */
 .success-page {
-  background: var(--pink);
+  background: var(--favoritePink);
 }
 .success-page h2 {
   margin-bottom: 1.5rem;
 }
 /* error page */
 .error-page {
-  background: var(--pink);
+  background: var(--favoritePink);
 }
 .error-page span {
   font-size: 10rem;
@@ -602,7 +602,7 @@ Testing Post and Components
 
 .code {
   background: #1e1e1e;
-  color: var(--pink);
+  color: var(--favoritePink);
   padding: 1rem 1.5rem;
   border-radius: var(--radius);
   margin: 2rem 0;
@@ -618,7 +618,7 @@ Testing Post and Components
 }
 
 .nice-text {
-  background: var(--pink);
+  background: var(--favoritePink);
   padding: 2rem 1.5rem;
   color: var(--black); 
   border-radius: var(--radius);
@@ -744,7 +744,7 @@ Footer
 }
 .mdx-article  a{
   margin: 0 5px;
-  color: var(--skirtBlue);
+  color: var(--pantsDarkPink);
 }
 .mdx-article a:hover {
   color: var(--black);
