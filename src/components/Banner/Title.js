@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: 1.5px;
     transform: translateY(-50%);
-    background: var(--grey);
+    background: var(--mauve);
     z-index: -1;
   }
 `
