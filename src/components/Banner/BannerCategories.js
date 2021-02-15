@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     border-radius: var(--radius);
   }
   .category:hover {
-    background: var(--clr-grey-10);
+    background: var(--cameraLightPink);
   }
 `
 export default BannerCategories

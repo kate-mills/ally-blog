@@ -26,7 +26,7 @@ const PostTemplate = ({data}) => {
           <Image fluid={image.childImageSharp.fluid} className="main-img"/>
           <div className="post-info">
             <span className="category">{category}</span>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <h4>{date}</h4>
             <div className="underline"></div>
           </div>
@@ -50,7 +50,7 @@ const Wrapper = styled.section`
     margin-bottom: 5rem;
   }
   .post-info {
-    margin: 2rem 0 4rem 0;
+    margin: 4rem 0 4rem 0;
     text-align: center;
     span {
       background: var(--primaryPink);
@@ -63,6 +63,7 @@ const Wrapper = styled.section`
     h2 {
       margin: 1.25rem 0;
       font-weight: 400;
+      font-size: 3rem;
     }
     p {
       color: var(--darkGrey);

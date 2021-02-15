@@ -68,19 +68,19 @@ const Wrapper = styled.blockquote`
     border: 6px solid var(--white);
   }
   .info {
-    background: var(--clr-primary-10);
-    color: var(--clr-primary-1);
-    border-color: var(--clr-primary-5);
+    background: var(--instaLadderlight);
+    color: var(--cameraText2);
+    border-color: var(--cameraPink);
     .icon {
-      color: var(--clr-primary-5);
+      color: var(--instaLadderDark);
     }
   }
   .warning {
-    background: #fffaeb;
-    color: #513c06;
-    border-color: #f7d070;
+    background: var(--instaLadderlight);
+    color: var(--vividText);
+    border-color: var(--instaLadderDark);
     .icon {
-      color: #f7d070;
+      color: var(--instaLadderDark);
     }
   }
   .quote {

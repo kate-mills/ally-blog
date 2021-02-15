@@ -73,7 +73,7 @@ const Wrapper = styled.div`
   }
   .post:hover {
     h5 {
-      color: var(--oldGrey);
+      color: var(--mauve);
       width: fit-content;
     }
   }

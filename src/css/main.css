@@ -10,34 +10,11 @@ Variables
 @import url("https://use.typekit.net/jrs5cnv.css");
 
 :root {
-  /* dark shades of primary color*/
-
-
-  --clr-primary-1:  hsl(245, 91%, 17%);
-  --clr-primary-2: hsl(245, 84%, 25%);
-  --clr-primary-3: hsl(245, 81%, 29%);
-  --clr-primary-4: hsl(245, 77%, 34%);
-
-  /* lighter shades of primary color */
-  --clr-primary-6: hsl(0deg 0% 0%);
-  --clr-primary-7: hsl(245, 65%, 59%);
-  --clr-primary-8: hsl(245, 80%, 74%);
-  --clr-primary-9: hsl(245, 94%, 87%);
-
-  /* darkest grey - used for headings */
-  --clr-grey-1: darkslategrey;
-  --clr-grey-2: darkslategrey;
-  --clr-grey-3: darkslategrey;
-  --clr-grey-4: darkslategrey;
-  /* grey used for paragraphs */
-  --clr-grey-5: darkslategrey;
-  --clr-grey-8: hsl(233deg 4% 58%);  /* --grey */ /*hsl(210, 31%, 80%);*/
-  --clr-grey-9: hsl(212, 33%, 89%);
-  --clr-grey-10: hsl(351deg 41% 93%); /* hsl(206, 33%, 96%);*/
-  --clr-green-dark: hsl(125, 67%, 35%);
-  --clr-green-light: hsl(134, 41%, 88%);
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
+  --hintOfPink: #fdeef314;
+  --hoverColor: hsl(0deg 100% 99% / 94%);
+  --hoverBackground: #909198;
+  --softPink: hsl(340deg 79% 96% / 40%);
+  --primaryPink: #f4e6e8;
 
   --ff-primary: baskerville-urw, serif;
   --ff-secondary: bree, sans-serif;
@@ -50,28 +27,48 @@ Variables
   --max-width: 1170px;
   --fixed-width: 700px;
 
-  --altBlack: rgb(15 14 23);
-  --black: hsl(0deg 0% 0%);
-  --white: #ffff;
-  --darkGrey: darkslategrey;
-  --grey: slategrey;
-  --pink:hsl(351deg 41% 93%);
-  --hintOfPink: #fdeef314;
-  --purple: #1f1499;
-  --favoritePink: hsl(350deg 100% 82%);
-  --hoverColor: hsl(0deg 100% 99% / 94%);
-  --hoverBackground: #909198;
-  --softPink: hsl(340deg 79% 96% / 40%);
-  --primaryPink: #f4e6e8;
-  --altPink: #fa8f83;
-  --phonePink: #eed2ca;
+/* Start Image Colors */
+  --favoritePink: #F0B4B2;
+  --otherPalePink: #FEEBEC;
+
+  --skirtBlue: #0261AC;
+  --skirtBlack: #3C4651;
+
+  --pantsDarkPink: #9E6D81;
+  --pantsLightPink: #F1B0CA;
+
+  --soulPink: #FAEBE9;
+
+  /* INSTAGRAM LADDER */
+  --instaLadderDark: #EAA59B;
+  --instaLadderlight: #F9EBE9;
+
+  /* VIVIDLY ME */
+  --vividPink: var(--otherPalePink);
+  --vividBlue: #C7CEEA;
+  --vividText: #4B4241;
+  
+
+  /* CAMERA */
+  --brightPink: #E31E69;
+  --mauve: #8F7F8C;
+  --cameraLightPink: #FDEBEA;
+  --cameraMauve: #D09505;
+  --cameraPink: #FFD3D1;
+  --cameraText1: #6B615F;
+  --cameraText2: #3D3531;
+
+/* End Image Colors */
+
+
   --pastelPink1: #fdeef3;
   --pastelPink2: #ecd9e0;
   --pastelPink3: #e5cfd6;
-  --tealGreen: hsl(180deg 33% 72%);
-  --red:crimson; 
-  --oldGrey: #b8b7bc;
-  --darkGreen: var(--oldGrey);
+
+  --black: #000000;
+  --white: #ffff;
+  --darkGrey: var(--mauve);
+  --grey: var(--skirtBlue);
 
 }
 /*
@@ -100,11 +97,11 @@ ul {
 }
 
 a {
-  color: var(--purple);
+  color: var(--mauve);
   text-decoration: none;
 }
 a:hover{
-  color: var(--black);
+  color: var(--skirtBlack);
 }
 
 h1,
@@ -131,7 +128,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--black);
+  color: var(--skirtBlack);
   /*background: var(--black);*/
 }
 @media screen and (min-width: 800px) {
@@ -191,13 +188,14 @@ p {
 .center-btn {
   text-align: center;
   margin: 3rem auto;
-  color: var(--black);
-  background: var(--oldGrey);
+  color: var(--cameraText1);
+  background: var(--favoritePink);
+  border-color: var(--cameraPink);
 }
 .center-btn:hover{
-  color: var(--black);
-  background: var(--pink);
-  border-color: var(--pink);
+  color: var(--cameraText2);
+  background: var(--favoritePink);
+  border-color: var(--cameraPink);
 }
 /* section */
 .page-center {
@@ -270,9 +268,8 @@ Navbar
 }
 
 .facebook-icon,
-.twitter-icon,
 .insta-icon{
-  color: var(--pastelPink1);
+  color: var(--mauve);
 }
 @media screen and (min-width: 800px) {
   .toggle-btn {
@@ -387,7 +384,7 @@ Hero
 ===============
 */
 .hero {
-  background: var(--oldGrey);
+  background: gainsboro;
   height: 20rem;
   position: relative;
   z-index: -1;
@@ -747,16 +744,17 @@ Footer
 }
 .mdx-article  a{
   margin: 0 5px;
-  color: var(--purple);
+  color: var(--skirtBlue);
 }
 .mdx-article a:hover {
   color: var(--black);
 }
 .mdx-article h2{
-  color: var(--darkGrey);
+  color: var(--vividText);
   margin-bottom: 2rem;
 }
 .mdx-article h3{
+  color: var(--vividText);
   margin-top: 3rem;
 }
 ul  {

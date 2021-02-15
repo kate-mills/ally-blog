@@ -38,7 +38,7 @@ const About = ({hideImg}) => {
 const Wrapper = styled.div`
   text-align: center;
   p {
-    color: var(--black);
+    color: var(--skirtBlack);
     font-size: 0.7rem;
   }
   .img {
