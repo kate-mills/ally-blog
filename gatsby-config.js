@@ -11,7 +11,7 @@ module.exports = {
         name:`Ally Digital Solutions`,
         url: `https://allyblog.app`,
         logo: `https://allyblog.app/ab-logo.png`,
-        siteImg:`https://allyblog.app/blogging.png`, 
+        siteImg:`https://allyblog.app/mainImg.jpg`,
       },
     },
   plugins: [
