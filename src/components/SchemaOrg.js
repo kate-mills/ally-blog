@@ -24,6 +24,7 @@ export default React.memo(
       },
     ];
 
+    console.log('author', author)
     const schema = isBlogPost
       ? [
           ...baseSchema,
@@ -56,7 +57,7 @@ export default React.memo(
             description,
             author: {
               '@type': 'Person',
-              name: author.name,
+              name: author,
             },
             publisher: {
               '@type': 'Organization',

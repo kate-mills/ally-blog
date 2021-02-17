@@ -86,7 +86,7 @@ const SEO = ({ title, description, image, article, isBlogPost, frontmatter={}, p
         description={postDesc || defaultDescription}
         datePublished={postDate}
         siteUrl={postUrl}
-        author={`Kate Author`}
+        author={frontmatter.author}
         organization={organization.name}
         defaultTitle={seo.title}
       />
