@@ -5,8 +5,8 @@ import Title from './Title'
 const BannerCategories = () => {
   return (
     <Wrapper>
-      <Title title="categories"/>
-      <Categories/>
+      <Title title="categories" />
+      <Categories />
     </Wrapper>
   )
 }

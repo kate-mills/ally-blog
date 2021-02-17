@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 const Counter = () => {
   const [count, setCount] = React.useState(0)
   return (

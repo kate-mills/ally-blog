@@ -10,12 +10,14 @@ const query = graphql`
   }
 `
 const Categories = () => {
-  const {allMdx:{distinct}} = useStaticQuery(query)
+  const {
+    allMdx: { distinct },
+  } = useStaticQuery(query)
 
   return (
     <ul className="categories">
-      {distinct.map((category, id)=>{
-        return(
+      {distinct.map((category, id) => {
+        return (
           <li key={id}>
             <Link to={`/${category}/`} className="category">
               {category}

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const myH2 = ({ children, title }) => {
   if (title) {
@@ -13,8 +13,8 @@ const myH2 = ({ children, title }) => {
   return (
     <h2
       style={{
-        margin: "2rem 0",
-        color: "var(--oldGrey)",
+        margin: '2rem 0',
+        color: 'var(--oldGrey)',
       }}
     >
       {children}
@@ -32,18 +32,20 @@ const HeadingTwo = styled.div`
 `
 
 const kateH2 = props => {
-  if(props.title){
-    return ( 
+  if (props.title) {
+    return (
       <>
-      <h2 {...props}>{props.children}</h2>
-      <div style={{
-        width: '200px',
-        height: '5px',
-        background: 'var(--favoritePink)',
-        margin: '0',
-        marginLeft: '2%',
-        marginBottom: '2rem',
-        }} />
+        <h2 {...props}>{props.children}</h2>
+        <div
+          style={{
+            width: '200px',
+            height: '5px',
+            background: 'var(--favoritePink)',
+            margin: '0',
+            marginLeft: '2%',
+            marginBottom: '2rem',
+          }}
+        />
       </>
     )
   }
@@ -52,7 +54,7 @@ const kateH2 = props => {
 
 const myH4 = props => {
   return (
-    <h3 style={{ margin: "2rem 0", color: "var(--oldGrey)" }}>
+    <h3 style={{ margin: '2rem 0', color: 'var(--oldGrey)' }}>
       {props.children}
     </h3>
   )

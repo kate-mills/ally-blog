@@ -5,24 +5,24 @@ import Posts from '../components/Posts'
 import { graphql } from 'gatsby'
 import SEO from '../components/SEO'
 
-
-const IndexPage = ({data}) => {
-  const {allMdx: {posts}} = data;
+const IndexPage = ({ data }) => {
+  const {
+    allMdx: { posts },
+  } = data
 
   return (
     <Layout>
-      <SEO title="Ally Digital Blog"/>
-      <Hero showGirl/>
+      <SEO title="Ally Digital Blog" />
+      <Hero showGirl />
       <Posts posts={posts} title="recently published" hideImg />
     </Layout>
   )
 }
 
-
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
-      posts:nodes {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 3) {
+      posts: nodes {
         id
         excerpt
         frontmatter {

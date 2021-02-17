@@ -5,11 +5,10 @@ import { Link } from 'gatsby'
 import Image from 'gatsby-image'
 import Title from './Title'
 
-
 const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 5) {
-      posts:nodes {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 5) {
+      posts: nodes {
         id
         frontmatter {
           title
@@ -29,15 +28,24 @@ const query = graphql`
 `
 
 const Recent = () => {
-  const {allMdx:{posts}} = useStaticQuery(query)
+  const {
+    allMdx: { posts },
+  } = useStaticQuery(query)
   return (
     <Wrapper>
-      <Title title="recent"/>
-      {posts.map(post =>{
-        const {title, slug, date, image:{childImageSharp:{fluid}}} = post.frontmatter
-        return(
+      <Title title="recent" />
+      {posts.map(post => {
+        const {
+          title,
+          slug,
+          date,
+          image: {
+            childImageSharp: { fluid },
+          },
+        } = post.frontmatter
+        return (
           <Link to={`/posts/${slug}/`} key={post.id} className="post">
-            <Image fluid={fluid} className="img"/>
+            <Image fluid={fluid} className="img" />
             <div>
               <h5>{title}</h5>
               <p>{date}</p>

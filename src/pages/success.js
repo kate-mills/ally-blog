@@ -6,11 +6,13 @@ import SEO from '../components/SEO'
 const Success = () => {
   return (
     <Layout>
-      <SEO title="Success"/>
+      <SEO title="Success" />
       <section className="success-page">
         <div className="page-center">
           <h2>your submission was received!</h2>
-          <Link to="/" className="btn">back home</Link>
+          <Link to="/" className="btn">
+            back home
+          </Link>
         </div>
       </section>
     </Layout>

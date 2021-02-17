@@ -5,7 +5,7 @@ import * as Headings from './Headings'
 import Code from './Code'
 import Blockquote from './Blockquote'
 import PrismSetup from './PrismSetup'
-import {Div, ColorSpan } from './Divs'
+import { Div, ColorSpan } from './Divs'
 export {
   Counter,
   LikeButton,

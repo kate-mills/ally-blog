@@ -8,26 +8,22 @@ import { graphql, Link } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import SEO from '../components/SEO'
 
-
-const PostTemplate = ({data}) => {
+const PostTemplate = ({ data }) => {
   const {
-    mdx: {frontmatter: {title, category, image, date },
+    mdx: {
+      frontmatter: { title, category, image, date },
       body,
     },
   } = data
 
   return (
     <Layout>
-      <SEO
-        title={title}
-        isBlogPost
-        frontmatter={data.mdx.frontmatter} 
-      />
-      <Hero showGirl/>
+      <SEO title={title} isBlogPost frontmatter={data.mdx.frontmatter} />
+      <Hero showGirl />
       <Wrapper>
         {/* post info*/}
         <article className="post-container">
-          <Image fluid={image.childImageSharp.fluid} className="main-img"/>
+          <Image fluid={image.childImageSharp.fluid} className="main-img" />
           <div className="post-info">
             <span className="category">{category}</span>
             <h2>{title}</h2>
@@ -37,9 +33,14 @@ const PostTemplate = ({data}) => {
           <MDXRenderer>{body}</MDXRenderer>
         </article>
         <article>
-          <Banner hideImg/>
+          <Banner hideImg />
         </article>
-      <div className="center" style={{marginBottom: '1rem'}} > <Link to="/posts" className="btn center-btn">back to all posts</Link> </div>
+        <div className="center" style={{ marginBottom: '1rem' }}>
+          {' '}
+          <Link to="/posts" className="btn center-btn">
+            back to all posts
+          </Link>{' '}
+        </div>
       </Wrapper>
     </Layout>
   )
@@ -50,7 +51,7 @@ const Wrapper = styled.section`
   max-width: 1100px;
   margin: 0 auto;
   margin-bottom: 4rem;
-  .post-container{
+  .post-container {
     margin-bottom: 5rem;
   }
   .post-info {
@@ -85,10 +86,10 @@ const Wrapper = styled.section`
     & {
       width: 92vw;
     }
-    .post-container{
+    .post-container {
       margin-bottom: 0;
     }
-    .main-img{
+    .main-img {
       max-width: 75%;
       margin: 0 auto;
     }
@@ -99,7 +100,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 200px;
       column-gap: 4rem;
     }
-    .main-img{
+    .main-img {
       max-width: 75%;
       margin: 0 auto;
     }
@@ -108,7 +109,7 @@ const Wrapper = styled.section`
 
 export const query = graphql`
   query GetSinglePost($slug: String) {
-    mdx(frontmatter: {slug: {eq: $slug}}) {
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       id
       body
       frontmatter {
@@ -124,7 +125,7 @@ export const query = graphql`
           }
         }
         date(formatString: "MMM Do, YYYY")
-        dateStamp:date
+        dateStamp: date
         author
         category
         readTime
@@ -132,7 +133,5 @@ export const query = graphql`
     }
   }
 `
-
-
 
 export default PostTemplate

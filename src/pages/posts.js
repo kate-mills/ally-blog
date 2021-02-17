@@ -6,20 +6,22 @@ import Posts from '../components/Posts'
 import SEO from '../components/SEO'
 
 const PostsPage = ({ data }) => {
-  const {allMdx:{posts}} = data
+  const {
+    allMdx: { posts },
+  } = data
   return (
     <Layout>
-      <SEO title="All Posts"/>
-    <Hero/>
-      <Posts posts={posts} title={'All Posts'}/>
+      <SEO title="All Posts" />
+      <Hero />
+      <Posts posts={posts} title={'All Posts'} />
     </Layout>
   )
 }
 
 export const query = graphql`
   {
-    allMdx(sort: {fields: frontmatter___date, order: DESC}) {
-      posts:nodes {
+    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      posts: nodes {
         id
         excerpt
         frontmatter {

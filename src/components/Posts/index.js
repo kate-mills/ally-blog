@@ -1,7 +1,7 @@
 import React from 'react'
 import Post from './Post'
 import Banner from '../Banner'
-const Posts = ({posts, title, hideImg}) => {
+const Posts = ({ posts, title, hideImg }) => {
   return (
     <section className="posts">
       <h3 className="posts-title">{title}</h3>
@@ -9,13 +9,12 @@ const Posts = ({posts, title, hideImg}) => {
         {/* posts column */}
         <article>
           {posts.map(post => {
-            return <Post key={post.id} {...post}/>
-            })
-          }
+            return <Post key={post.id} {...post} />
+          })}
         </article>
         {/* banner column */}
         <article>
-          <Banner hideImg={hideImg}/>
+          <Banner hideImg={hideImg} />
         </article>
       </div>
     </section>

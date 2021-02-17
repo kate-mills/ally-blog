@@ -1,8 +1,5 @@
-import React from "react"
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-} from "react-icons/fa"
+import React from 'react'
+import { FaFacebookSquare, FaInstagramSquare } from 'react-icons/fa'
 const SocialLinks = ({ styleClass }) => {
   return (
     <ul className={styleClass}>
@@ -13,7 +10,7 @@ const SocialLinks = ({ styleClass }) => {
       </li>
       <li>
         <a href="https://instagram.com/allydigitalsolutions">
-          <FaInstagramSquare className="social-icon insta-icon"/>
+          <FaInstagramSquare className="social-icon insta-icon" />
         </a>
       </li>
     </ul>
