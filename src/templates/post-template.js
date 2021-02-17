@@ -11,14 +11,18 @@ import SEO from '../components/SEO'
 
 const PostTemplate = ({data}) => {
   const {
-    mdx: {frontmatter: {title, category, image, date},
+    mdx: {frontmatter: {title, category, image, date },
       body,
     },
   } = data
 
   return (
     <Layout>
-      <SEO title={title}/>
+      <SEO
+        title={title}
+        isBlogPost
+        frontmatter={data.mdx.frontmatter} 
+      />
       <Hero showGirl/>
       <Wrapper>
         {/* post info*/}
@@ -109,8 +113,10 @@ export const query = graphql`
       body
       frontmatter {
         title
+        desc
         slug
         image {
+          publicURL
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid

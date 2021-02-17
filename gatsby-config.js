@@ -2,10 +2,17 @@ module.exports = {
     siteMetadata: {
       title: `Ally Blog`,
       titleTemplate: `%s | Ally Blog`,
-      description: `A blog of helpful list about web development.`,
-      url: `https://allydigitalblog.netlify.app`,
+      description: `A blog full of helpful list about web development.`,
+      url: `https://allyblog.app`,
       image: `blogging.png`, // must be in static/
       twitterUsername: `@katie_napa`,
+      siteUrl: `https://allyblog.app`,
+      organization: {
+        name:`Ally Digital Solutions`,
+        url: `https://allyblog.app`,
+        logo: `https://allyblog.app/blogging.png`,
+        siteImg:`https://allyblog.app/blogging.png`, 
+      },
     },
   plugins: [
     `gatsby-plugin-react-helmet`,
