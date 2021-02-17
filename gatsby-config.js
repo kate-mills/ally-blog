@@ -10,7 +10,7 @@ module.exports = {
       organization: {
         name:`Ally Digital Solutions`,
         url: `https://allyblog.app`,
-        logo: `https://allyblog.app/blogging.png`,
+        logo: `https://allyblog.app/ab-logo.png`,
         siteImg:`https://allyblog.app/blogging.png`, 
       },
     },
@@ -53,6 +53,19 @@ module.exports = {
             { family: 'Open Sans' },
           ],
         },
+      },
+    },
+   {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Ally Digital Solutions Blog",
+        short_name: "Ally Blog",
+        start_url: "/",
+        background_color: "#ffff",
+        theme_color: "#F0B4B4",
+        display: "standalone",
+        icon: "src/assets/icon.png", // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
       },
     },
   ],
