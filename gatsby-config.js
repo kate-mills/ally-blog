@@ -11,7 +11,7 @@ module.exports = {
     twitterUsername: `@katie_napa`,
     siteUrl: `https://allyblog.app`,
     organization: {
-      name: `Ally Digital Solutions`,
+      name: `Ally Digital Blog`,
       url: `https://allyblog.app`,
       logo: `https://allyblog.app/ab-logo.png`,
       siteImg: `https://allyblog.app/mainImg.jpg`,
