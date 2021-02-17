@@ -17,21 +17,14 @@ export default React.memo(
     organization,
     defaultTitle,
   }) => {
-    const navCrumbs = navLinks.map(link => {
+    const linkCrumbs = navLinks.map(link => {
       return {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            type: 'ListItem',
-            name: link.text,
-            position: link.id,
-            item: `${url}${link.url}`,
-          },
-        ],
+        type: 'ListItem',
+        name: link.text,
+        position: link.id,
+        item: `${url}${link.url}`,
       }
     })
-
     const baseSchema = [
       {
         '@context': 'http://schema.org',
@@ -56,7 +49,11 @@ export default React.memo(
           },
         ],
       },
-      ...navCrumbs,
+      {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: linkCrumbs,
+      },
     ]
 
     const schema = isBlogPost
