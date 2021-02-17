@@ -3,28 +3,32 @@ import { Helmet } from 'react-helmet';
 
 export default React.memo(
   ({
-    author,
-    siteUrl,
-    datePublished,
-    defaultTitle,
-    description,
-    image,
     isBlogPost,
-    organization,
-    title,
     url,
+    title,
+    image,
+    description,
+    dateCreated,
+    datePublished,
+    dateModified,
+    siteUrl,
+    author,
+    organization,
+    defaultTitle,
   }) => {
     const baseSchema = [
       {
         '@context': 'http://schema.org',
         '@type': 'WebSite',
         url,
-        name: title,
-        alternateName: defaultTitle,
+        dateCreated,
+        datePublished,
+        dateModified,
+        name: defaultTitle,
+        alternateName: title,
       },
     ];
 
-    console.log('author', author)
     const schema = isBlogPost
       ? [
           ...baseSchema,
@@ -75,7 +79,27 @@ export default React.memo(
             datePublished,
           },
         ]
-      : baseSchema;
+      : baseSchema.concat([
+        {
+          mainEntityOfPage: {
+        '@type': 'WebSite',
+        '@id': siteUrl,
+        }},
+          {
+            '@context': 'http://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                item: {
+                  '@id':url,
+                  name: title,
+                  image,
+                },
+              },
+            ],
+          }])
 
     return (
       <Helmet>

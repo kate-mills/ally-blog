@@ -13,14 +13,14 @@ const SEO = ({ title, description, image, article, isBlogPost, frontmatter={}, p
     defaultTitle,
     titleTemplate,
     defaultDescription,
+    dateCreated,
+    datePublished,
+    dateModified,
     siteUrl,
     defaultImage,
     twitterUsername,
     organization,
   } = site.siteMetadata
-
-  console.log('frontmatter', frontmatter)
-  console.log('image', image)
 
   const seo = {
     title: title || defaultTitle,
@@ -29,21 +29,18 @@ const SEO = ({ title, description, image, article, isBlogPost, frontmatter={}, p
     url: `${siteUrl}${pathname}`,
   }
 
-
-  console.log('seo', seo);
-
   const postMeta =
     frontmatter || postData.childMarkdownRemark
     .frontmatter || {};
 
-  const postTitle = defaultTitle || seo.title;
+
+  const postTitle = postMeta.title || seo.title;
   const postDesc = postMeta.desc || seo.description;
-  const postImage = frontmatter.image ? `${siteUrl}/${frontmatter.image.publicURL}` : seo.image 
+  const postImage = postMeta.image ? `${siteUrl}/${frontmatter.image.publicURL}` : seo.image 
   //const postImage = frontmatter.image ? `${seo.url}${defaultImage}` : seo.image;
-  const postUrl = postMeta.slug
-        ? `${seo.url}/${postMeta.slug}/`
-        : seo.url;
-  const postDate = isBlogPost ? postMeta.date : false;
+  const postCreated = isBlogPost ? postMeta.dateStamp : dateCreated;
+  const postPublished = isBlogPost ? postMeta.dateStamp : datePublished;
+  const postModified = isBlogPost ? postMeta.dateStamp : dateModified;
 
 
   return (
@@ -80,15 +77,17 @@ const SEO = ({ title, description, image, article, isBlogPost, frontmatter={}, p
     </Helmet>
       <SchemaOrg
         isBlogPost={isBlogPost}
-        url={seo.url}
+        url={siteUrl}
         title={ postTitle || seo.title}
         image={postImage || seo.image}
         description={postDesc || defaultDescription}
-        datePublished={postDate}
-        siteUrl={postUrl}
+        dateCreated={postCreated}
+        datePublished={postPublished}
+        dateModified={postModified}
+        siteUrl={seo.url}
         author={frontmatter.author}
-        organization={organization.name}
-        defaultTitle={seo.title}
+        organization={organization}
+        defaultTitle={defaultTitle}
       />
     </React.Fragment>
   )
@@ -118,6 +117,9 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         titleTemplate
+        dateCreated
+        datePublished
+        dateModified
         defaultDescription: description
         siteUrl: url
         defaultImage: image
@@ -126,6 +128,7 @@ const query = graphql`
           name
           url
           logo
+          siteImg
         }
       }
     }

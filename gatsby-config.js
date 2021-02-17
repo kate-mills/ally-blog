@@ -4,7 +4,10 @@ module.exports = {
       titleTemplate: `%s | Ally Blog`,
       description: `A blog full of helpful list about web development.`,
       url: `https://allyblog.app`,
-      image: `blogging.png`, // must be in static/
+      dateCreated: `2021-01-01T08:00:00.000Z`,
+      datePublished: `2021-02-02T08:00:00.000Z`,
+      dateModified: `${new Date().toISOString()}`,
+      image: `mainImg.jpg`, // must be in static/
       twitterUsername: `@katie_napa`,
       siteUrl: `https://allyblog.app`,
       organization: {

@@ -124,6 +124,7 @@ export const query = graphql`
           }
         }
         date(formatString: "MMM Do, YYYY")
+        dateStamp:date
         author
         category
         readTime
