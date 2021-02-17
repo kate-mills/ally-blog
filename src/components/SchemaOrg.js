@@ -1,4 +1,5 @@
 import React from 'react'
+import { navLinks } from '../constants/links'
 import { Helmet } from 'react-helmet'
 
 export default React.memo(
@@ -16,6 +17,21 @@ export default React.memo(
     organization,
     defaultTitle,
   }) => {
+    const navCrumbs = navLinks.map(link => {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            type: 'ListItem',
+            name: link.text,
+            position: link.id,
+            item: `${url}${link.url}`,
+          },
+        ],
+      }
+    })
+
     const baseSchema = [
       {
         '@context': 'http://schema.org',
@@ -40,6 +56,7 @@ export default React.memo(
           },
         ],
       },
+      ...navCrumbs,
     ]
 
     const schema = isBlogPost

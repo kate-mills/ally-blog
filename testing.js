@@ -1,6 +1,5 @@
 import { Link } from 'gatsby'
 import { FiInfo } from 'react-icons/fi'
-
 ;<section className="mdx-page">
   <div className="code">
     <div className="center">

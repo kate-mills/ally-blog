@@ -24,3 +24,21 @@ const Links = ({ styleClass, children }) => {
 }
 
 export default Links
+
+export const navLinks = [
+  {
+    text: 'Home',
+    url: '/',
+    id: 1,
+  },
+  {
+    text: 'Posts',
+    url: '/posts',
+    id: 2,
+  },
+  {
+    text: 'Newsletter',
+    url: '/newsletter',
+    id: 3,
+  },
+]
